@@ -1,5 +1,7 @@
 probando git push
 a ver sigo probando
+otra vez
+
 
 npx sequelize-cli db:migrate
 

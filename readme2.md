@@ -3,6 +3,7 @@ a ver sigo probando
 otra vez
 another changes
 
+1900hs
 
 npx sequelize-cli db:migrate
 

@@ -1,3 +1,6 @@
+probando git push
+a ver sigo probando
+
 npx sequelize-cli db:migrate
 
 esto migra las tablas de la base de datos. 

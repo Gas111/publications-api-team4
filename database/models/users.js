@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Users',
     tableName: 'users',
     underscored: true,
-    timestamps: false,
+    timestamps: true,
     scopes: {
       view_public: { attributes: ['id', 'first_name', 'last_name', 'country_id', 'image_url'] },
       view_same_user: { attributes: ['id', 'first_name', 'last_name', 'country_id', 'image_url', 'email', 'username', 'code_phone', 'phone'] },

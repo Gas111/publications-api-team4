@@ -5,15 +5,16 @@ require('dotenv').config()
 
 const routerModels = require('./routes/models.router')
 const routerErrorHandler = require('./routes/errorhandler.router')
+const swaggerDocs = require('./swagger')
 
 
 const app = express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8080
 
 /*
 Cors Settings
 */
-const whitelist = ['http://localhost:8000']
+const whitelist = ['http://localhost:8080']
 const corsOptions = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) ||  !origin) {
@@ -45,19 +46,21 @@ app.use(express.urlencoded({ extended: true }))
 /* 
     Tell everyone the state of your api
 */
-app.get('/', ({ res }) => {
-  return res.json({
-    status: 'Up',
-    maintenance: false,
-  })
-})
+// app.get('/', ({ res }) => {
+//   return res.json({
+//     status: 'Up',
+//     maintenance: false,
+//   })
+// })
 
 /*
 Routes
 */
-routerModels(app)
-routerErrorHandler(app)
+// routerModels(app)
+// routerErrorHandler(app)
 
 app.listen(PORT, () => {
   console.log(`Server on PORT: ${PORT}`)
+  swaggerDocs(app, PORT)
 })
+

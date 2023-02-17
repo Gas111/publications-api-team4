@@ -5,13 +5,13 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Roles extends Model {
     static associate(models) {
-      Roles.hasMany(models.Profiles, { as: 'profiles', foreignKey:'role_id' })
+      Roles.hasMany(models.Profiles, { as: 'profiles', foreignKey: 'role_id' })
     }
   }
   Roles.init({
     id: {
-      type:DataTypes.INTEGER,
-      primaryKey:true
+      type: DataTypes.INTEGER,
+      primaryKey: true
     },
     name: DataTypes.STRING
   }, {

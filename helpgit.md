@@ -1,3 +1,11 @@
+COMMMIT
+feat: nueva caracteristica
+fix: solucion a un bug o error
+docs: documentacion
+perf: cofigo q mejora el performance
+refactor: codigo q cambia una caracteristica
+test: codigo de test
+
 COLLABORATORS
 agregar colabodores. 
 git branch dev  //esto crea la rama dev

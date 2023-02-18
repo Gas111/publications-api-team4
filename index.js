@@ -6,13 +6,14 @@ require('dotenv').config()
 const routerModels = require('./routes/models.router')
 const routerErrorHandler = require('./routes/errorhandler.router')
 
+
 const app = express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8080
 
 /*
 Cors Settings
 */
-const whitelist = ['http://localhost:8000']
+const whitelist = ['http://localhost:8080']
 const corsOptions = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
@@ -61,4 +62,6 @@ routerErrorHandler(app)
 
 app.listen(PORT, () => {
   console.log(`Server on PORT: ${PORT}`)
+
 })
+

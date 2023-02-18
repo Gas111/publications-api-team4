@@ -6,10 +6,6 @@ require('dotenv').config()
 const routerModels = require('./routes/models.router')
 const routerErrorHandler = require('./routes/errorhandler.router')
 
-
-/* const db = require('./database/models/index'); */
-
-
 const app = express()
 const PORT = process.env.PORT || 8000
 
@@ -44,17 +40,6 @@ Accept Json & form-urlencoded
 */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-
-
-
-/* db.authenticate()
-  .then(() => console.log('... authentication ...'))
-  .catch((error) => console.log(error));
-
-db.sync({ force: true })
-  .then(() => console.log('... sync ...'))
-  .catch((error) => console.log(error))
- */
 
 
 /* 
